@@ -10,7 +10,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:  Colors.white,
+      backgroundColor:  Colors.white.withOpacity(0.90),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -27,7 +27,7 @@ class Homepage extends StatelessWidget {
               child: Row(
                 children: [
                   const CircleAvatar(
-                    radius: 20,
+                    radius: 25,
                     backgroundImage: AssetImage('android/assets/images/ggh.jpg'),
                   ),
                   const SizedBox(

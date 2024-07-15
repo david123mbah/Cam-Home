@@ -1,7 +1,5 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:movein/widget/build_Items.dart';
 import 'package:movein/widget/near_me%20_buildings.dart';
 import 'package:movein/utils/places.dart';
@@ -12,7 +10,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 252, 246, 246),
+      backgroundColor:  Colors.white,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -26,30 +24,44 @@ class Homepage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
               ),
-              child: RichText(
-                text: const TextSpan(
-                  children: [
-                    TextSpan(
-                      text: "Hello, ",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.normal),
+              child: Row(
+                children: [
+                  const CircleAvatar(
+                    radius: 20,
+                    backgroundImage: AssetImage('android/assets/images/ggh.jpg'),
+                  ),
+                  const SizedBox(
+                      width:
+                          10), // Add some space between the icon and the text
+                  RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Hello, ",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "David!",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 23,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
-                    TextSpan(
-                      text: "David!",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 23,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
+              
             ),
             actions: [
               Image.asset(
-                'android/assets/images/Frame 37.png',
+                'android/assets/images/Menu(2).png',
                 width: 44,
                 height: 44,
                 color: Colors.black.withOpacity(0.5),
@@ -167,7 +179,6 @@ class Homepage extends StatelessWidget {
           ),
         ],
       ),
-      
     );
   }
 }

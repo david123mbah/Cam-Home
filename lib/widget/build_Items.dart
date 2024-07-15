@@ -1,4 +1,4 @@
-// ignore: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movein/utils/places.dart';
@@ -26,11 +26,12 @@ class BuildingItem extends StatelessWidget {
         
       },
       child: Container(
+        margin: margin,
         height: height,
         width: width,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color:  Colors.white,
           borderRadius: BorderRadius.circular(19),
         ),
         child: Column(

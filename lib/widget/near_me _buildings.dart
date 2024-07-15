@@ -4,7 +4,7 @@ import 'package:movein/widget/build_Items.dart';
 import 'package:movein/utils/places.dart';
 
 
-class BuildingsClose extends StatelessWidget {
+class BuildingsClose extends StatelessWidget { 
   const BuildingsClose({super.key});
 
   @override

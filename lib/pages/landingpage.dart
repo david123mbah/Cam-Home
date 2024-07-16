@@ -57,7 +57,7 @@ class _LoadScreensState extends State<LoadScreens> {
           ],
         ),
         Container(
-          alignment: const Alignment(0, 0.4),
+          alignment: const Alignment(0, 0.7),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

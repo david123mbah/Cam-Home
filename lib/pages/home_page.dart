@@ -28,7 +28,7 @@ class Homepage extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 25,
-                    backgroundImage: AssetImage('android/assets/images/ggh.jpg'),
+                    backgroundImage: AssetImage('android/assets/images/gsgg.png'),
                   ),
                   const SizedBox(
                       width:
@@ -141,7 +141,7 @@ class Homepage extends StatelessWidget {
             child: BuildingsClose(),
           ),
           const SliverPadding(
-            padding: EdgeInsets.fromLTRB(24, 0, 24, 10),
+            padding: EdgeInsets.all(24),
             sliver: SliverToBoxAdapter(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

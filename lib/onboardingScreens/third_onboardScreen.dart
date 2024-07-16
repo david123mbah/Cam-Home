@@ -12,7 +12,7 @@ class Screen3 extends StatelessWidget {
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('android/assets/images/onboarding(1).png'), fit: BoxFit.cover
+              image: AssetImage('android/assets/images/StockCake-Real Estate Deal_1721071549.jpg'), fit: BoxFit.cover
             ), 
           ), 
         ),

@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movein/utils/places.dart';
+import 'package:movein/widget/buildingdetails.dart';
 
 // ignore: camel_case_types
 class BuildingItem extends StatelessWidget {
@@ -23,7 +24,7 @@ class BuildingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        
+    
       },
       child: Container(
         margin: margin,

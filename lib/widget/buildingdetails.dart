@@ -1,16 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movein/pages/home_page.dart';
+import 'package:movein/utils/places.dart';
 
 
 class BuildDetails extends StatefulWidget {
-  const BuildDetails({super.key});
+  const BuildDetails({super.key , required this.building,});
+
+   final Places building;
 
   @override
   State<BuildDetails> createState() => _BuildDetailsState();
 }
 
 class _BuildDetailsState extends State<BuildDetails> {
+     late final Places building;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +26,8 @@ class _BuildDetailsState extends State<BuildDetails> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(color: Colors.black.withOpacity(0.2)),
-              image: const DecorationImage(
-                  image: AssetImage('android/assets/images/camer2.jpg'),
+              image:  DecorationImage(
+                  image: AssetImage(building.assets),
                   fit: BoxFit.cover),
             ),
           ),

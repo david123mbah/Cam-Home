@@ -3,18 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:movein/pages/home_page.dart';
 import 'package:movein/utils/places.dart';
 
-
 class BuildDetails extends StatefulWidget {
-  const BuildDetails({super.key , required this.building,});
+  final Places building;
 
-   final Places building;
+   const BuildDetails({super.key, required this.building});
 
   @override
   State<BuildDetails> createState() => _BuildDetailsState();
 }
 
 class _BuildDetailsState extends State<BuildDetails> {
-     late final Places building;
+  late final Places building;
+
+  @override
+  void initState() {
+    super.initState();
+    building = widget.building;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,9 +32,10 @@ class _BuildDetailsState extends State<BuildDetails> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               border: Border.all(color: Colors.black.withOpacity(0.2)),
-              image:  DecorationImage(
-                  image: AssetImage(building.assets),
-                  fit: BoxFit.cover),
+              image: DecorationImage(
+                image: AssetImage(building.assets),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Padding(
@@ -47,7 +54,7 @@ class _BuildDetailsState extends State<BuildDetails> {
                   children: [
                     InkWell(
                       onTap: () {
-                         Navigator.pushReplacement(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const Homepage(),
@@ -57,7 +64,9 @@ class _BuildDetailsState extends State<BuildDetails> {
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         decoration: const BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.white),
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
                         child: const Icon(
                           CupertinoIcons.back,
                         ),
@@ -68,7 +77,9 @@ class _BuildDetailsState extends State<BuildDetails> {
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         decoration: const BoxDecoration(
-                            shape: BoxShape.circle, color: Colors.white),
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                        ),
                         child: const Icon(
                           CupertinoIcons.bookmark,
                           size: 24,
@@ -78,23 +89,19 @@ class _BuildDetailsState extends State<BuildDetails> {
                   ],
                 ),
                 const Expanded(
-                  child: SizedBox(
-                    
-                  ),
+                  child: SizedBox(),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(16)
+                    borderRadius: BorderRadius.circular(16),
                   ),
                   child: const Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      
-                    ],
+                    children: [],
                   ),
                 ),
               ],

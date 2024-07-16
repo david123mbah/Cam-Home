@@ -24,7 +24,15 @@ class BuildingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-    
+    Navigator.pushReplacement(
+  context,
+  MaterialPageRoute(
+    builder: (context) {
+      return  BuildDetails(building: building);
+    }, // Replace `someBuilding` with your actual Places instance
+  ),
+);
+
       },
       child: Container(
         margin: margin,

@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:movein/pages/home_page.dart';
 import 'package:movein/utils/places.dart';
 
 class BuildDetails extends StatefulWidget {
   final Places building;
 
-   const BuildDetails({super.key, required this.building});
+  const BuildDetails({super.key, required this.building});
 
   @override
   State<BuildDetails> createState() => _BuildDetailsState();
@@ -24,6 +25,7 @@ class _BuildDetailsState extends State<BuildDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white.withOpacity(0.90),
       body: Stack(
         children: [
           Container(
@@ -81,7 +83,7 @@ class _BuildDetailsState extends State<BuildDetails> {
                           color: Colors.white,
                         ),
                         child: const Icon(
-                          CupertinoIcons.bookmark,
+                          CupertinoIcons.heart_circle,
                           size: 24,
                         ),
                       ),
@@ -98,13 +100,167 @@ class _BuildDetailsState extends State<BuildDetails> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: const Column(
+                  child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [],
+                    children: [
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        building.tag,
+                        style: const TextStyle(color: Colors.black),
+                      ),
+                      Text(
+                        building.name,
+                        style: const TextStyle(color: Colors.black),
+                        maxLines: 1,
+                      ),
+                      Row(mainAxisSize: MainAxisSize.min, children: [
+                        const Icon(
+                          CupertinoIcons.placemark_fill,
+                          size: 20,
+                        ),
+                        Text(
+                          building.location,
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Icon(
+                          Icons.bathtub_outlined,
+                          size: 20,
+                        ),
+                        Text(
+                          building.bathroom.toString(),
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Icon(
+                          Icons.bedroom_parent_outlined,
+                          size: 20,
+                        ),
+                        Text(
+                          building.bedroom.toString(),
+                          style: const TextStyle(color: Colors.black),
+                        ),
+                      ]),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(
+                            Icons.home_work_outlined,
+                            size: 20,
+                          ),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          Text(
+                            "${building.area} m",
+                            style: const TextStyle(color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 30,
+                      ),
+                      const Text(
+                        "About :",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        building.about,
+                        style: const TextStyle(color: Colors.black),
+                      ),
+                      const Divider(
+                        height: 32,
+                      ),
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: "\$${building.price}/mo",
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
+                const SizedBox(height: 16,),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          height: 52,
+                          width: 52,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage('android/assets/images/gsgg.png')
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 56,),
+                        const Expanded(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 12,),
+                              Text('Anna Denis', style: TextStyle(color: Colors.black),),
+                              SizedBox(height: 5,),
+                              Text('Agent', style: TextStyle(color: Colors.grey),),
+                            ],
+                          ),
+                        ),
+                        Icon(
+                          Icons.phone,
+                          color: Colors.red.withOpacity(0.56),
+                          size: 32,
+                        )
+                      ],
+                  ),
+            ),
+            const SizedBox(height: 30,),
+            InkWell(
+              onTap: () {
+                
+              },
+              borderRadius: BorderRadius.circular(50),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Colors.red.withOpacity(0.56),
+                ),
+                alignment: Alignment.center,
+                child: const Text('Book Visit'),
+              ),
+            ),
+            
+            ],
             ),
           ),
         ],

@@ -19,7 +19,7 @@ class Homepage extends StatelessWidget {
             centerTitle: false,
             elevation: 0,
             titleSpacing: 0,
-            toolbarHeight: 100,
+            toolbarHeight: 150,
             title: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 20,
@@ -45,7 +45,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         TextSpan(
-                          text: "David!",
+                          text: "Danice!",
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 23,
@@ -61,13 +61,13 @@ class Homepage extends StatelessWidget {
             ),
             actions: [
               Image.asset(
-                'android/assets/images/Menu(2).png',
-                width: 44,
-                height: 44,
+                'android/assets/images/Frame 37.png',
+                width: 64,
+                height: 64,
                 color: Colors.black.withOpacity(0.5),
               ),
               const SizedBox(
-                width: 34,
+                width: 30,
               ),
             ],
             bottom: PreferredSize(

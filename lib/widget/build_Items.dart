@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movein/utils/places.dart';
@@ -24,15 +23,14 @@ class BuildingItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-    Navigator.pushReplacement(
-  context,
-  MaterialPageRoute(
-    builder: (context) {
-      return  BuildDetails(building: building);
-    }, // Replace `someBuilding` with your actual Places instance
-  ),
-);
-
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return BuildDetails(building: building);
+            }, // Replace `someBuilding` with your actual Places instance
+          ),
+        );
       },
       child: Container(
         margin: margin,
@@ -40,8 +38,15 @@ class BuildingItem extends StatelessWidget {
         width: width,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color:  Colors.white,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(19),
+          boxShadow:  const [
+            BoxShadow(
+              color: Color.fromRGBO(143, 148, 251, .2),
+              offset: Offset(0, 10),
+              blurRadius: 6.0,
+            ),
+          ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,7 +63,8 @@ class BuildingItem extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       image: DecorationImage(
-                          image: AssetImage(building.assets), fit: BoxFit.cover),
+                          image: AssetImage(building.assets),
+                          fit: BoxFit.cover),
                     ),
                   ),
                   Positioned(
@@ -98,9 +104,11 @@ class BuildingItem extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Row(mainAxisSize: MainAxisSize.min, children: [
-                              Icon(CupertinoIcons.heart),
-                            ]),
+                            const Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(CupertinoIcons.heart),
+                                ]),
                             if (!showDetail) ...[
                               const SizedBox(
                                 height: 8,
@@ -136,8 +144,7 @@ class BuildingItem extends StatelessWidget {
                 style: const TextStyle(color: Colors.black),
                 maxLines: 1,
               ),
-              Row(
-                mainAxisSize: MainAxisSize.min, children: [
+              Row(mainAxisSize: MainAxisSize.min, children: [
                 const Icon(
                   CupertinoIcons.placemark_fill,
                   size: 20,
@@ -146,11 +153,9 @@ class BuildingItem extends StatelessWidget {
                   building.location,
                   style: const TextStyle(color: Colors.black),
                 ),
-              
-              const SizedBox(
-                width: 10,
-              ),
-              
+                const SizedBox(
+                  width: 10,
+                ),
                 const Icon(
                   Icons.bathtub_outlined,
                   size: 20,
@@ -159,11 +164,9 @@ class BuildingItem extends StatelessWidget {
                   building.bathroom.toString(),
                   style: const TextStyle(color: Colors.black),
                 ),
-              
-              const SizedBox(
-                width: 10,
-              ),
-              
+                const SizedBox(
+                  width: 10,
+                ),
                 const Icon(
                   Icons.bedroom_parent_outlined,
                   size: 20,
@@ -172,7 +175,7 @@ class BuildingItem extends StatelessWidget {
                   building.bedroom.toString(),
                   style: const TextStyle(color: Colors.black),
                 ),
-            ]),
+              ]),
               RichText(
                 text: TextSpan(
                   children: [

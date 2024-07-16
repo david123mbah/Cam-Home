@@ -10,7 +10,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:  Colors.white.withOpacity(0.90),
+      backgroundColor:  Colors.white,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(

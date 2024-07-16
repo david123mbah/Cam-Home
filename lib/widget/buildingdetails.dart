@@ -25,7 +25,7 @@ class _BuildDetailsState extends State<BuildDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white.withOpacity(0.90),
+      backgroundColor: Colors.white.withOpacity(0.97),
       body: Stack(
         children: [
           Container(

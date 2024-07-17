@@ -180,7 +180,7 @@ class Homepage extends StatelessWidget {
           ),
         ],
       ),
-      
+      bottomNavigationBar: const BottomNav(),
     );
   }
 }

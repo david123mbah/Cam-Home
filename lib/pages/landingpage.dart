@@ -5,6 +5,7 @@ import 'package:movein/pages/home_page.dart';
 import 'package:movein/onboardingScreens/first_onboardScreen.dart';
 import 'package:movein/onboardingScreens/second_onboarding.dart';
 import 'package:movein/onboardingScreens/third_onboardScreen.dart';
+import 'package:movein/pages/login_page.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 

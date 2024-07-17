@@ -1,8 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:iconly/iconly.dart';
-import 'package:sizer/sizer.dart';
+import 'package:movein/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -42,15 +41,15 @@ class _LoginPageState extends State<LoginPage> {
               child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Container(
-              height: 100.h,
-              decoration: BoxDecoration(color: Colors.white),
-              padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 2.h),
+              height: 10,
+              decoration: const BoxDecoration(color: Colors.white),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                    height: 5.h,
+                  const SizedBox(
+                    height: 50,
                   ),
                   FadeInDown(
                     delay: const Duration(milliseconds: 900),
@@ -59,13 +58,13 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           IconlyBroken.arrow_left,
-                          size: 3.6.h,
+                          size: 20,
                         )),
                   ),
-                  SizedBox(
-                    height: 2.h,
+                  const SizedBox(
+                    height: 20,
                   ),
                   Container(
                     child: Column(
@@ -77,13 +76,13 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text(
                             'Let\'s Sign You In',
                             style: TextStyle(
-                              fontSize: 25.sp,
+                              fontSize: 25,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 1.h,
+                          height: 10,
                         ),
                         FadeInDown(
                           delay: const Duration(milliseconds: 700),
@@ -91,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text(
                             'Welcome Back.',
                             style: TextStyle(
-                              fontSize: 25.sp,
+                              fontSize: 25,
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -99,10 +98,10 @@ class _LoginPageState extends State<LoginPage> {
                         FadeInDown(
                           delay: const Duration(milliseconds: 600),
                           duration: const Duration(milliseconds: 700),
-                          child: Text(
+                          child: const Text(
                             'You\'ve been missed!',
                             style: TextStyle(
-                              fontSize: 25.sp,
+                              fontSize: 25,
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -111,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 5.h,
+                    height: 100,
                   ),
                   FadeInDown(
                     delay: const Duration(milliseconds: 700),
@@ -128,9 +127,9 @@ class _LoginPageState extends State<LoginPage> {
                     delay: const Duration(milliseconds: 600),
                     duration: const Duration(milliseconds: 700),
                     child: Container(
-                      margin: EdgeInsets.symmetric(vertical: 0.8.h),
+                      margin: EdgeInsets.symmetric(vertical: 0.8),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 5.w, vertical: .3.h),
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 12),
                       decoration: BoxDecoration(
                           color:
                               isFocusedEmail ? Colors.white : Color(0xFFF1F0F5),
@@ -155,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 2.h,
+                    height: 5,
                   ),
                   FadeInDown(
                     delay: const Duration(milliseconds: 500),
@@ -172,9 +171,9 @@ class _LoginPageState extends State<LoginPage> {
                     delay: const Duration(milliseconds: 400),
                     duration: const Duration(milliseconds: 500),
                     child: Container(
-                      margin: EdgeInsets.symmetric(vertical: 0.8.h),
+                      margin: EdgeInsets.symmetric(vertical: 40),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 5.w, vertical: .3.h),
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                       decoration: BoxDecoration(
                           color: isFocusedPassword
                               ? Colors.white
@@ -197,7 +196,7 @@ class _LoginPageState extends State<LoginPage> {
                             suffixIcon: Icon(
                               Icons.visibility_off_outlined,
                               color: Colors.grey,
-                              size: 16.sp,
+                              size: 16,
                             ),
                             border: InputBorder.none,
                             hintText: 'Password'),
@@ -216,7 +215,14 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                                Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Homepage(),
+                              ),
+                            );
+                            },
                             child: FadeInUp(
                                 delay: const Duration(milliseconds: 700),
                                 duration: const Duration(milliseconds: 800),

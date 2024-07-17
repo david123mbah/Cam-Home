@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:movein/pages/home_page.dart';
+import 'package:movein/pages/login_page.dart';
 import 'package:movein/utils/places.dart';
 
 class BuildDetails extends StatefulWidget {
@@ -245,7 +246,12 @@ class _BuildDetailsState extends State<BuildDetails> {
             const SizedBox(height: 30,),
             InkWell(
               onTap: () {
-                
+                 Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginPage(),
+                              ),
+                            );
               },
               borderRadius: BorderRadius.circular(50),
               child: Container(

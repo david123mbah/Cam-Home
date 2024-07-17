@@ -40,6 +40,12 @@ dependencies:
   flutter_svg: ^2.0.9
   curved_navigation_bar: ^1.0.6
   smooth_page_indicator: ^1.1.0
+  google_nav_bar: ^5.0.6
+  line_icons: ^2.0.3
+  iconly: ^1.0.1
+  responsive_sizer: ^3.3.1
+  
+  animate_do: ^3.3.4
 
 dev_dependencies:
   flutter_test:

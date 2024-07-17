@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movein/widget/build_Items.dart';
+import 'package:movein/widget/buttonnavigator.dart';
 import 'package:movein/widget/near_me%20_buildings.dart';
 import 'package:movein/utils/places.dart';
 
@@ -179,6 +180,7 @@ class Homepage extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: const BottomNav(),
     );
   }
 }

@@ -40,11 +40,12 @@ class BuildingItem extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(19),
+          border: Border.all(color: Colors.grey.withOpacity(0.4)),
           boxShadow:  const [
             BoxShadow(
               color: Color.fromRGBO(143, 148, 251, .2),
               offset: Offset(0, 10),
-              blurRadius: 6.0,
+              blurRadius: 8.0,
             ),
           ],
         ),

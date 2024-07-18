@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movein/pages/home_page.dart';
 import 'package:movein/pages/landingpage.dart';
+import 'package:movein/widget/buttonnavigator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoadScreens(),
         '/home': (context) => const Homepage(),
-        '/notification': (context) => const Homepage(),
+        '/notification': (context) => const BottomNav(),
         '/heat-pump': (context) => const LoadScreens(),
         '/usb': (context) => const Homepage(),
         '/settings': (context) => const Homepage(),

@@ -130,7 +130,7 @@ class Homepage extends StatelessWidget {
                   Text(
                     'See All',
                     style: TextStyle(
-                        color: Color.fromARGB(255, 133, 48, 154),
+                        color: Colors.orange,
                         fontSize: 14,
                         fontWeight: FontWeight.bold),
                   ),

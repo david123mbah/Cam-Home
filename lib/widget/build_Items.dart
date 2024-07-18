@@ -138,24 +138,25 @@ class BuildingItem extends StatelessWidget {
             if (showDetail) ...[
               Text(
                 building.tag,
-                style: const TextStyle(color: Colors.black),
+                style:  TextStyle(color: Colors.black.withOpacity(0.20), fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Text(
                 building.name,
-                style: const TextStyle(color: Colors.black),
+                style: const TextStyle(color: Colors.orange , fontSize: 20, fontWeight: FontWeight.bold),
                 maxLines: 1,
               ),
               Row(mainAxisSize: MainAxisSize.min, children: [
                 const Icon(
+                  color: Colors.blue,
                   CupertinoIcons.placemark_fill,
                   size: 20,
                 ),
                 Text(
                   building.location,
-                  style: const TextStyle(color: Colors.black),
+                  style:  TextStyle(color: Colors.black.withOpacity(0.40)),
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 20,
                 ),
                 const Icon(
                   Icons.bathtub_outlined,
@@ -177,12 +178,13 @@ class BuildingItem extends StatelessWidget {
                   style: const TextStyle(color: Colors.black),
                 ),
               ]),
+              SizedBox(height: 10,),
               RichText(
                 text: TextSpan(
                   children: [
                     TextSpan(
                       text: "\$${building.price}",
-                      style: const TextStyle(color: Colors.black),
+                      style: const TextStyle(color: Colors.orange),
                     ),
                   ],
                 ),

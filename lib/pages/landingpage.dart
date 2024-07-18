@@ -6,6 +6,7 @@ import 'package:movein/onboardingScreens/first_onboardScreen.dart';
 import 'package:movein/onboardingScreens/second_onboarding.dart';
 import 'package:movein/onboardingScreens/third_onboardScreen.dart';
 import 'package:movein/pages/login_page.dart';
+import 'package:movein/widget/buttonnavigator.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
@@ -72,7 +73,7 @@ class _LoadScreensState extends State<LoadScreens> {
                   Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const Homepage(),
+                                builder: (context) => const BottomNav(),
                               ),
                             );
                 },

@@ -12,43 +12,60 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
+  int _selectedIndex = 0;
+
+  static const List<Widget> _pages = <Widget>[
+    Homepage(),
+     Homepage(),
+      Homepage(),
+       Homepage(),
+    
+    
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      bottomNavigationBar: 
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
-          child: GNav(
-            backgroundColor: Colors.white,
-            gap: 10,
-            color: Colors.black.withOpacity(0.4),
-            activeColor: Colors.orange.withOpacity(0.4),
-            tabBackgroundColor: Colors.orange.withOpacity(0.2),
-            padding: const EdgeInsets.all(14),
-            onTabChange: (index) {
-              
-            },
-            tabs: const [
-              GButton(
-                icon: Icons.home,
-                text: "Home",
-              ), 
-                 GButton(
-                icon: Icons.favorite_border,
-                text: "Likes",
-              ), 
-              
-                  GButton(
-                icon: Icons.search,
-                text: "Search",
-              ), 
-              GButton(
-                icon: Icons.person,
-                text: "Profile",
-              ), 
-            ]
-          ),
+    return Scaffold(
+      body: Center(
+        child: _pages.elementAt(_selectedIndex),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 14),
+        child: GNav(
+          backgroundColor: Colors.white,
+          gap: 10,
+          color: Colors.black.withOpacity(0.4),
+          activeColor: Colors.orange.withOpacity(0.4),
+          tabBackgroundColor: Colors.orange.withOpacity(0.2),
+          padding: const EdgeInsets.all(14),
+          onTabChange: _onItemTapped,
+          selectedIndex: _selectedIndex,
+          tabs: const [
+            GButton(
+              icon: Icons.home,
+              text: "Home",
+            ),
+            GButton(
+              icon: Icons.favorite_border,
+              text: "Likes",
+            ),
+            GButton(
+              icon: Icons.search,
+              text: "Search",
+            ),
+            GButton(
+              icon: Icons.person,
+              text: "Profile",
+            ),
+          ],
         ),
+      ),
     );
   }
 }

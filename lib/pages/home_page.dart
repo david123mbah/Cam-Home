@@ -85,9 +85,9 @@ class Homepage extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(5),
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: Colors.black.withOpacity(0.4),
+                      color: Colors.grey.withOpacity(0.8),
                     ),
                   ),
                   child: Row(

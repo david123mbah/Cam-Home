@@ -19,6 +19,7 @@ class _BottomNavState extends State<BottomNav> {
      Homepage(),
       Homepage(),
        Homepage(),
+       Homepage(),
     
     
   ];
@@ -51,13 +52,17 @@ class _BottomNavState extends State<BottomNav> {
               icon: Icons.home,
               text: "Home",
             ),
-            GButton(
-              icon: Icons.favorite_border,
-              text: "Likes",
-            ),
-            GButton(
+             GButton(
               icon: Icons.search,
               text: "Search",
+            ),
+             GButton(
+              icon: Icons.add,
+              text: "Upload",
+            ),
+             GButton(
+              icon: Icons.favorite_border,
+              text: "Likes",
             ),
             GButton(
               icon: Icons.person,

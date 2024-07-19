@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoadScreens(),
         '/home': (context) => const Homepage(),
-        '/notification': (context) => const BottomNav(),
+        '/notification': (context) => const Homepage(),
         '/heat-pump': (context) => const LoadScreens(),
         '/usb': (context) => const Homepage(),
         '/settings': (context) => const Homepage(),

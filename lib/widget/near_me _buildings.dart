@@ -1,4 +1,4 @@
-// ignore: file_names
+
 import 'package:flutter/material.dart';
 import 'package:movein/widget/build_Items.dart';
 import 'package:movein/utils/places.dart';
@@ -20,7 +20,7 @@ class BuildingsClose extends StatelessWidget {
           return  BuildingItem(
             building: buildings[index],
             height: 350,
-            width: 300,
+            width: 290,
             margin: EdgeInsets.only(
               left: index == 0 ? 0 : 16,
             ),

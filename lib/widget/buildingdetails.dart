@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:movein/pages/home_page.dart';
 import 'package:movein/utils/places.dart';
+import 'package:movein/widget/near_me%20_buildings.dart';
 
 class BuildDetails extends StatefulWidget {
   final Places building;
@@ -243,9 +244,19 @@ class _BuildDetailsState extends State<BuildDetails> {
                       ),
                     ),
                   ),
+                 
                 ],
               ),
             ),
+             const SizedBox(height: 20,),
+                    const Text(
+                    'Similar properties',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                    const BuildingsClose(),
           ],
         ),
       ),

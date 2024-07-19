@@ -183,8 +183,8 @@ class BuildingItem extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: "\$${building.price}",
-                      style: const TextStyle(color: Colors.orange),
+                      text: "\$${building.price}/mo",
+                      style: const TextStyle(color: Colors.orange, fontSize: 17,),
                     ),
                   ],
                 ),

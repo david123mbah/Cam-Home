@@ -17,14 +17,14 @@ class Screen1 extends StatelessWidget {
           ), 
         ),
         const Positioned(
-          top: 200,
+          top: 100,
           left: 78,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "let's Find your ",
+                  " let's Find your ",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,

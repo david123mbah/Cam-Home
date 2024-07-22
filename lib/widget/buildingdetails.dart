@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:movein/pages/home_page.dart';
 import 'package:movein/utils/places.dart';
+import 'package:movein/widget/buttonnavigator.dart';
 import 'package:movein/widget/near_me%20_buildings.dart';
 
 class BuildDetails extends StatefulWidget {
@@ -59,7 +59,7 @@ class _BuildDetailsState extends State<BuildDetails> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const Homepage(),
+                              builder: (context) => const BottomNav(),
                             ),
                           );
                         },
